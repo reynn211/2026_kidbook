@@ -41,8 +41,8 @@ def main():
     
     # Используем pathlib для путей (отличается от os.path в примере)
     base_path = Path(__file__).resolve().parent.parent.parent
-    articles_path = base_path / "WEB" / "5.2_cybersecurity" / "articles"
-    output_path = base_path / "WORK" / "5.2_cybersecurity" / "knowledge_graph.json"
+    articles_path = base_path / "WEB" / "5.2_cybersecurity" / "passwords_cyber_safety" / "articles"
+    output_path = base_path / "WORK" / "5.2_cybersecurity" / "passwords_cyber_safety" / "knowledge_graph.json"
     
     if not articles_path.exists():
         print(f"Директория со статьями не найдена: {articles_path}")

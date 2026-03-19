@@ -140,10 +140,9 @@ def update_markdown_with_image(md_path, image_name, concept_name):
         print(f"Не удалось найти место для вставки картинки в {os.path.basename(md_path)}")
 
 def main():
-    # Путь к concepts.json (теперь в той же папке)
     concepts_path = os.path.join(os.path.dirname(__file__), 'concepts.json')
-    images_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'WEB', '5.2_cybersecurity', 'images')
-    articles_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'WEB', '5.2_cybersecurity', 'articles')
+    images_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'WEB', '5.2_cybersecurity', 'passwords_cyber_safety', 'images')
+    articles_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'WEB', '5.2_cybersecurity', 'passwords_cyber_safety', 'articles')
     
     os.makedirs(images_dir, exist_ok=True)
     
@@ -157,7 +156,7 @@ def main():
         print(f"\n--- Обработка концепта: {name} ---")
         
         # 1. Генерируем текст и записываем в файл
-        if os.path.exists(os.path.join(articles_dir, f"{name}.md")):
+        if not os.path.exists(os.path.join(articles_dir, f"{name}.md")):
             generated_text = generate_text(name, name, desc)
             md_path = os.path.join(articles_dir, f"{name}.md")
             

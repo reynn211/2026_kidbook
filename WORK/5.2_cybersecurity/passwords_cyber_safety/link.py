@@ -75,7 +75,7 @@ def main():
     # Используем pathlib для более современного и чистого кода
     root_dir = Path(__file__).resolve().parent.parent.parent
     concepts_file = Path(__file__).resolve().parent / 'concepts.json'
-    articles_dir = root_dir / 'WEB' / '5.2_cybersecurity' / 'articles'
+    articles_dir = root_dir / 'WEB' / '5.2_cybersecurity' / 'passwords_cyber_safety' / 'articles'
 
     print("Старт процесса линковки терминов...")
     
